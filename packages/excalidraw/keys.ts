@@ -1,5 +1,6 @@
 import { isDarwin } from "./constants";
 
+
 export const CODES = {
   EQUAL: "Equal",
   MINUS: "Minus",
@@ -15,6 +16,7 @@ export const CODES = {
   QUOTE: "Quote",
   ZERO: "Digit0",
   SLASH: "Slash",
+  B: "KeyB",
   C: "KeyC",
   D: "KeyD",
   H: "KeyH",
@@ -47,6 +49,7 @@ export const KEYS = {
   SUBTRACT: "-",
 
   A: "a",
+  B: "b",
   C: "c",
   D: "d",
   E: "e",
