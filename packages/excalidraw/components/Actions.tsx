@@ -118,36 +118,36 @@ export const SelectedShapeActions = ({
 
       {(hasStrokeStyle(appState.activeTool.type) ||
         targetElements.some((element) => hasStrokeStyle(element.type))) && (
-        <>
-          {renderAction("changeStrokeStyle")}
-          {renderAction("changeSloppiness")}
-        </>
-      )}
+          <>
+            {renderAction("changeStrokeStyle")}
+            {renderAction("changeSloppiness")}
+          </>
+        )}
 
       {(canChangeRoundness(appState.activeTool.type) ||
         targetElements.some((element) => canChangeRoundness(element.type))) && (
-        <>{renderAction("changeRoundness")}</>
-      )}
+          <>{renderAction("changeRoundness")}</>
+        )}
 
       {(appState.activeTool.type === "text" ||
         targetElements.some(isTextElement)) && (
-        <>
-          {renderAction("changeFontSize")}
+          <>
+            {renderAction("changeFontSize")}
 
-          {renderAction("changeFontFamily")}
+            {renderAction("changeFontFamily")}
 
-          {(appState.activeTool.type === "text" ||
-            suppportsHorizontalAlign(targetElements, elementsMap)) &&
-            renderAction("changeTextAlign")}
-        </>
-      )}
+            {(appState.activeTool.type === "text" ||
+              suppportsHorizontalAlign(targetElements, elementsMap)) &&
+              renderAction("changeTextAlign")}
+          </>
+        )}
 
       {shouldAllowVerticalAlign(targetElements, elementsMap) &&
         renderAction("changeVerticalAlign")}
       {(canHaveArrowheads(appState.activeTool.type) ||
         targetElements.some((element) => canHaveArrowheads(element.type))) && (
-        <>{renderAction("changeArrowhead")}</>
-      )}
+          <>{renderAction("changeArrowhead")}</>
+        )}
 
       {renderAction("changeOpacity")}
 
@@ -243,7 +243,7 @@ export const ShapesSwitcher = ({
       {SHAPES.map(({ value, icon, key, numericKey, fillable }, index) => {
         if (
           UIOptions.tools?.[
-            value as Extract<typeof value, keyof AppProps["UIOptions"]["tools"]>
+          value as Extract<typeof value, keyof AppProps["UIOptions"]["tools"]>
           ] === false
         ) {
           return null;
@@ -353,7 +353,7 @@ export const ShapesSwitcher = ({
             icon={laserPointerToolIcon}
             data-testid="toolbar-laser"
             selected={laserToolSelected}
-            shortcut={KEYS.K.toLocaleUpperCase()}
+            shortcut={KEYS.J.toLocaleUpperCase()}
           >
             {t("toolBar.laser")}
           </DropdownMenu.Item>

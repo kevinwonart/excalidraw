@@ -165,7 +165,7 @@ export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
               shortcuts={[KEYS.E, KEYS["0"]]}
             />
             <Shortcut label={t("toolBar.frame")} shortcuts={[KEYS.F]} />
-            <Shortcut label={t("toolBar.laser")} shortcuts={[KEYS.K]} />
+            <Shortcut label={t("toolBar.laser")} shortcuts={[KEYS.J]} />
             <Shortcut
               label={t("labels.eyeDropper")}
               shortcuts={[KEYS.I, "Shift+S", "Shift+G"]}
@@ -407,9 +407,9 @@ export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
               shortcuts={
                 isWindows
                   ? [
-                      getShortcutKey("CtrlOrCmd+Y"),
-                      getShortcutKey("CtrlOrCmd+Shift+Z"),
-                    ]
+                    getShortcutKey("CtrlOrCmd+Y"),
+                    getShortcutKey("CtrlOrCmd+Shift+Z"),
+                  ]
                   : [getShortcutKey("CtrlOrCmd+Shift+Z")]
               }
             />

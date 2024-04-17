@@ -128,19 +128,19 @@ export const Hyperlink = ({
         mutateElement(element, {
           ...(hasLinkChanged
             ? {
-                width:
-                  embedLink?.type === "video"
-                    ? width > height
-                      ? width
-                      : height * ar
-                    : width,
-                height:
-                  embedLink?.type === "video"
-                    ? width > height
-                      ? width / ar
-                      : height
-                    : height,
-              }
+              width:
+                embedLink?.type === "video"
+                  ? width > height
+                    ? width
+                    : height * ar
+                  : width,
+              height:
+                embedLink?.type === "video"
+                  ? width > height
+                    ? width / ar
+                    : height
+                  : height,
+            }
             : {}),
           link,
         });
@@ -340,8 +340,8 @@ export const getContextMenuLabel = (
       ? "labels.link.editEmbed"
       : "labels.link.edit"
     : isEmbeddableElement(selectedElements[0])
-    ? "labels.link.createEmbed"
-    : "labels.link.create";
+      ? "labels.link.createEmbed"
+      : "labels.link.create";
   return label;
 };
 

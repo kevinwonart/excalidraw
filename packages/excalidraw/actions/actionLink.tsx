@@ -41,11 +41,10 @@ export const actionLink = register({
         type="button"
         icon={LinkIcon}
         aria-label={t(getContextMenuLabel(elements, appState))}
-        title={`${
-          isEmbeddableElement(elements[0])
+        title={`${isEmbeddableElement(elements[0])
             ? t("labels.link.labelEmbed")
             : t("labels.link.label")
-        } - ${getShortcutKey("CtrlOrCmd+K")}`}
+          } - ${getShortcutKey("CtrlOrCmd+K")}`}
         onClick={() => updateData(null)}
         selected={selectedElements.length === 1 && !!selectedElements[0].link}
       />
